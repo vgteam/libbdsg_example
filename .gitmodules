@@ -1,0 +1,3 @@
+[submodule "deps/libbdsg"]
+	path = deps/libbdsg
+	url = https://github.com/vgteam/libbdsg.git
