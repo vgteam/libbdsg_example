@@ -26,6 +26,8 @@ add_executable(libbdsg_example ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
 # Make it link libbdsg and all the libraries it packages and depends on, and
 # use its interface includes.
 target_link_libraries(libbdsg_example libbdsg)
+# Make sure we can find our libraries after installation, if we aren't installing into the system search path
+set_target_properties(libbdsg_example PROPERTIES INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
     
 # When installing, install our binary
 install(TARGETS libbdsg_example
